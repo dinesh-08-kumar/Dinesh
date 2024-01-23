@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,13 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
     <style>
+    .nav-link:hover{
+    color: red;
 
-.nav-link {
-    color: rgb(250, 249, 249);
 }
-
         .xyz{
             width: 100%;
-            height: 300px;
+            height: 600px;
         }
         .cx{
           width: 300px;
@@ -45,36 +44,37 @@
 
 
 <header>
-  <nav class="navbar navbar-expand-md navbar-danger fixed-top bg-primary">
+  <nav class="navbar navbar-expand-md navbar-white fixed-top bg-white ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><button><img src="{{asset('images/delivery.png')}}"  style="height: 50px" width="50px"></button></a>
+      <a class="navbar-brand " href="#"><button><img src="{{asset('images/delivery.png')}}"  style="height: 50px" width="50px"></button></a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="navbarCustom"><b>Home</b></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Share</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="#"><b>Share</b></a>
           </li>
 
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Delivary address</a>
+            <a class="nav-link" href="#"><b>Near By Store </b></a>
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Delivary man trace</a>
+            <a class="nav-link" href="#"><b> trace delivery</b></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="#"><b>Login</b></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Sign up</a>
+            <a class="nav-link" href="#"><b>Sign up</b></a>
         </li>
         </ul>
         <form class="d-flex">
@@ -86,6 +86,44 @@
       </div>
     </div>
   </nav>
+  <!--
+  <nav class="navbar navbar-expand-md navbar-white fixed-top bg-white ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><a class="navbar-brand " href="#"><button><img src="{{asset('images/delivery.png')}}"  style="height: 50px" width="50px"></button></a>
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>-->
 </header>
 
 
@@ -148,65 +186,13 @@
 
 
 
-
-
-<!--main>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="Quick buy">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{asset('images/fruits.jpg')}}" class="xyz">
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">offer ends soon</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" class="slide">
-        <img src="{{asset('images/vege.jpg')}}" class="xyz">
-         <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">buy it now</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" class="slide" >
-        <img src="{{asset('images/meats.png')}}" class="xyz">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">50% discout</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div-->
-
-
-
+<br>
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Fruits Benifits
-  </button>
+  <div class="d-flex justify-content-center d-flex justify-content-center">
+<button type="button" class="btn btn-white d-flex justify-content-center bg-info"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h3>See me</h3>
+    <img src="{{asset('images/apple.png')}}" style="height: 50px" width="50px">
+</button>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -222,18 +208,22 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Understood</button>
         </div>
       </div>
     </div>
   </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrops">
-    vegetables Benefits
+<br>
+<div class="d-flex justify-content-center d-flex justify-content-center">
+  <button type="button" class="btn btn-white d-flex justify-content-center bg-danger"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <img src="{{asset('images/vegetables.png')}}" style="height: 50px" width="50px"><h3>Taste me</h3>
   </button>
+</div>
 
   <!-- Modal -->
+
   <div class="modal fade" id="staticBackdrops" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropsLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -242,13 +232,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <p> What vegetables benefit?<br>
+        <p> What vegetables benifit?<br>
            <p>Lower Blood Pressure. Many green leafy vegetables like kale, spinach, and chard contain potassium. ...
             Lower Risk of Heart Disease. Green leafy vegetables also contain vitamin K, which is believed to prevent calcium from building up in your arteries. ...
             Diabetes Control</p></div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Understood</button>
         </div>
       </div>
     </div>
@@ -256,16 +246,23 @@
 
 
   <!---card--->
-  <div class="card-group row bg-danger card border-dark " >
+  <div class="card-group row bg-white card border-dark " >
     <div class="card border-3 border-dark">
       <img src={{asset('images/onion.webp')}} class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">ONION</h5>
-        <p class="card-text">Available at Just --<b> 4$</b></p>
+        <h5 class="card-title">Onion(White Sweet Spanish)</h5>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>250g at 1$</option>
+            <option value="1">500g at 2$</option>
+            <option value="2">750g at 2.5$</option>
+            <option value="3">1kg at 4$</option>
+          </select>
 
-        <button type="button" class="btn btn-outline-success">Buy</button>
-        <button type="button" class="btn btn-outline-info">add to cart</button>
+          <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+          <button type="button" class="btn btn-warning" id="press"onclick = "effect6()"><b>Add to Cart</b></button>
+
             <div class="input-group w-auto justify-content-end align-items-center">
+              <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
@@ -277,11 +274,17 @@
     <div class="card border-3 border-dark">
         <img src={{asset('images/tomato.jpg')}} class="card-img-top" >
         <div class="card-body">
-            <h5 class="card-title">Tomato</h5>
-            <p class="card-text">Available at Just --<b> 3$</b></p>
-            <button type="button" class="btn btn-outline-success">Buy</button>
-            <button type="button" class="btn btn-outline-info">add to cart</button>
+            <h5 class="card-title">Tomato(Cherry tomatoes)</h5>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>250g at 1$</option>
+                <option value="1">500g at 2$</option>
+                <option value="2">750g at 2.5$</option>
+                <option value="3">1kg at 4$</option>
+              </select>
+              <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+              <button type="button" class="btn btn-warning" id="press" onclick = "effect6()"><b>Add to Cart</b></button>
             <div class="input-group w-auto justify-content-end align-items-center">
+              <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
@@ -290,13 +293,19 @@
     </div>
 
     <div class="card border-5 border-dark">
-        <img src="{{asset('images/chicken.jpg')}}" class="card-img-top">
+        <img src="{{asset('images/chic.jpg')}}" class="card-img-top">
         <div class="card-body">
-        <h5 class="card-title">Chicken</h5>
-        <p class="card-text">Available at Just --<b>3$</b></p>
-        <button type="button" class="btn btn-outline-success">Buy</button>
-        <button type="button" class="btn btn-outline-info">add to cart</button>
+          <h5 class="card-title">(Chicken)Rhode Island Red</h5>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>250g at 5$</option>
+            <option value="1">500g at 10$</option>
+            <option value="2">750g at 12.5$</option>
+            <option value="3">1kg at 17$</option>
+          </select>
+          <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+          <button type="button" class="btn btn-warning" id="press" onclick = "effect6()"><b>Add to Cart</b></button>
             <div class="input-group w-auto justify-content-end align-items-center">
+              <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
@@ -310,11 +319,17 @@
     <div class="card border-5 border-dark">
       <img src={{asset('images/apple.jpg')}} class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Apple</h5>
-        <p class="card-text">Available at Just --<b> 5$</b></p>
-        <button type="button" class="btn btn-outline-success">Buy</button>
-        <button type="button" class="btn btn-outline-info">add to cart</button>
+        <h5 class="card-title">Apple(Red Delicious)</h5>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>250g at 2$</option>
+            <option value="1">500g at 4$</option>
+            <option value="2">750g at 5$</option>
+            <option value="3">1kg at 7$</option>
+          </select>
+          <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+          <button type="button" class="btn btn-warning" id="press" onclick = "effect6()"><b>Add to Cart</b></button>
             <div class="input-group w-auto justify-content-end align-items-center">
+              <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
@@ -325,25 +340,37 @@
     <div class="card border-5 border-dark">
       <img src={{asset('images/mango.jpg')}} class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Mango</h5>
-        <p class="card-text">Available at Just -- <b>5$</b></p>
-        <button type="button" class="btn btn-outline-success">Buy</button>
-        <button type="button" class="btn btn-outline-info">add to cart</button>
+        <h5 class="card-title">Mango(Dasheri)</h5>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>250g at 1$</option>
+            <option value="1">500g at 2$</option>
+            <option value="2">750g at 35$</option>
+            <option value="3">1kg at 4$</option>
+          </select>
+          <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+          <button type="button" class="btn btn-warning" id="press" onclick = "effect6()"><b>Add to Cart</b></button>
           <div class="input-group w-auto justify-content-end align-items-center">
+            <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
           <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
           <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
           <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
           </div>
         </div>
   </div>
-  <div class="card border-5 border-dark">
-    <img src={{asset('images/papaya.jpg')}} class="card-img-top">
+  <div class="card border-5 border-dark ">
+    <img src={{asset('images/papaya.jpg')}} class="card-img-top ">
       <div class="card-body">
-        <h5 class="card-title">Papaya</h5>
-        <p class="card-text">Available at Just -- <b>3$</b></p>
-        <button type="button" class="btn btn-outline-success">Buy</button>
-        <button type="button" class="btn btn-outline-info">add to cart</button>
+        <h5 class="card-title">Papaya(Pusa Delicious)</h5>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>250g at 1$</option>
+            <option value="1">500g at 2$</option>
+            <option value="2">750g at 2.5$</option>
+            <option value="3">1kg at 4$</option>
+          </select>
+          <button type="button" class="btn btn-success" id="press" onclick = "effect6()"><b>Buy</b></button>
+          <button type="button" class="btn btn-warning" id="press" onclick = "effect6()"><b>Add to Cart</b></button>
             <div class="input-group w-auto justify-content-end align-items-center">
+              <h3 class><small><button class="btn btn-info">kgs</button></small></h3>
             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
@@ -352,19 +379,22 @@
     </div>
   </div>
 <br>
-  <div class=" more items" >
-    <button type="button" class="btn btn-outline-success">See More</button>
-    <button type="button" class="btn btn-outline-info">add to cart</button>
-  </div>
+<br>
+<div class="d-flex justify-content-end bg-white ">
+  <button type="button" class="btn btn-danger">See more</button>
+  <button type="button" class="btn btn-success">Move to cart</button>
+</div>
+
+
 <br>
 <!--footer-->
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted bg-info ">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-info text-white">
     <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
+    <div class="me-5 d-none d-lg-block bg-info">
+      <span><h3>Get connected with us on social networks:</h3></span>
     </div>
     <!-- Left -->
 
@@ -479,6 +509,8 @@
   </div>
   <!-- Copyright -->
 </footer>
+<script src={{asset('js/script.js')}}> </script>
 <!-- Footer -->
   </body>
+
 </html>
